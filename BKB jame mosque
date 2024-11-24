@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকেবি জামে মসজিদ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .section h3 {
+            margin-bottom: 10px;
+        }
+        .donation-form input, .donation-form select, .donation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .donation-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .donation-form button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>বিকেবি জামে মসজিদ</h1>
+</header>
+
+<nav>
+    <a href="#home">হোম</a>
+    <a href="#donation">ডোনেশন</a>
+    <a href="#contact">যোগাযোগ</a>
+</nav>
+
+<div class="content">
+    <!-- হোম পেজ সেকশন -->
+    <section id="home" class="section">
+        <h2>প্রতিদিন কিছু লেখার অপশন</h2>
+        <form action="#" method="POST">
+            <textarea name="dailyMessage" rows="4" placeholder="আপনার দৈনিক বার্তা লিখুন"></textarea>
+            <button type="submit">জমা দিন</button>
+        </form>
+    </section>
+
+    <!-- ডোনেশন সেকশন -->
+    <section id="donation" class="section">
+        <h2>ডোনেশন করতে চান?</h2>
+        <p>নিচে দেওয়া বিভিন্ন ক্যাটেগরি থেকে একটি বেছে নিন এবং আপনার ডোনেশন পাঠান।</p>
+
+        <div class="donation-category">
+            <h3>ডোনেশন ক্যাটেগরি</h3>
+            <label>
+                <input type="radio" name="category" value="মসজিদ"> মসজিদ এ জন্য
+            </label>
+            <label>
+                <input type="radio" name="category" value="ইমাম মুয়াজ্জিন"> ইমাম মুয়াজ্জিন এর বেতন
+            </label>
+            <label>
+                <input type="radio" name="category" value="যাকাত"> যাকাত
+            </label>
+            <label>
+                <input type="radio" name="category" value="গরিবদের জন্য"> গরিবদের জন্য
+            </label>
+        </div>
+
+        <div class="donation-form">
+            <h3>আপনার ডোনেশন তথ্য দিন</h3>
+            <form action="/submit" method="POST">
+                <label for="name">নাম:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">ইমেইল:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="amount">ডোনেশন পরিমাণ (টাকা):</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <label for="message">যেকোনো বার্তা (ঐচ্ছিক):</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">ডোনেট করুন</button>
+            </form>
+        </div>
+
+        <!-- পেমেন্ট অপশন -->
+        <div class="payment-options">
+            <h3>পেমেন্ট অপশন</h3>
+            <p>ডোনেশন পেমেন্টের জন্য নিচের অপশনগুলো ব্যবহার করুন:</p>
+            <ul>
+                <li>Bkash: 01614179285</li>
+                <li>Nagad: 01614179285</li>
+                <li>Rocket: 01614179285</li>
+                <li>Upay: 01614179285</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- যোগাযোগ সেকশন -->
+    <section id="contact" class="section">
+        <h2>যোগাযোগ</h2>
+        <p>বি কে বি জামে মসজিদ</p>
+        <p>কন্টাক্ট নম্বর:</p>
+        <ul>
+            <li>ইমাম: 01723456768</li>
+            <li>মুয়াজ্জিন: 01749374846</li>
+            <li>সভাপতি: (নাম এবং নম্বর যুক্ত করুন)</li>
+            <li>পেজের কোনো সমস্যাই যোগাযোগ করুন: 01522102455</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 বিকেবি জামে মসজিদ. সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
+
+</body>
+</html>
